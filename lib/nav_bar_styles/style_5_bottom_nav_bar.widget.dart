@@ -12,11 +12,11 @@ class _BottomNavStyle5 extends StatelessWidget {
       navBarEssentials.navBarHeight == 0
           ? const SizedBox.shrink()
           : SizedBox(
-              width: 24,
-              height: 24 / 1,
+              width: 150,
+              height: height! / 1,
               child: Container(
                 alignment: Alignment.center,
-                height: 24,
+                height: height / 1,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
