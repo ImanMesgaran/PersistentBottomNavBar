@@ -20,19 +20,17 @@ class _BottomNavStyle5 extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Expanded(
-                      child: IconTheme(
-                        data: IconThemeData(
-                            size: item.iconSize,
-                            color: isSelected
-                                ? (item.activeColorSecondary ??
-                                    item.activeColorPrimary)
-                                : item.inactiveColorPrimary ??
-                                    item.activeColorPrimary),
-                        child: isSelected
-                            ? item.icon
-                            : item.inactiveIcon ?? item.icon,
-                      ),
+                    IconTheme(
+                      data: IconThemeData(
+                          size: item.iconSize,
+                          color: isSelected
+                              ? (item.activeColorSecondary ??
+                                  item.activeColorPrimary)
+                              : item.inactiveColorPrimary ??
+                                  item.activeColorPrimary),
+                      child: isSelected
+                          ? item.icon
+                          : item.inactiveIcon ?? item.icon,
                     ),
                     Container(
                       height: 5,
