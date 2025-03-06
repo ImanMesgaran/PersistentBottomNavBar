@@ -12,25 +12,27 @@ class _BottomNavStyle5 extends StatelessWidget {
       navBarEssentials.navBarHeight == 0
           ? const SizedBox.shrink()
           : SizedBox(
-              width: 150,
-              height: height! / 1,
+              width: 24,
+              height: 24 / 1,
               child: Container(
                 alignment: Alignment.center,
-                height: height / 1,
+                height: 24,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    IconTheme(
-                      data: IconThemeData(
-                          size: item.iconSize,
-                          color: isSelected
-                              ? (item.activeColorSecondary ??
-                                  item.activeColorPrimary)
-                              : item.inactiveColorPrimary ??
-                                  item.activeColorPrimary),
-                      child: isSelected
-                          ? item.icon
-                          : item.inactiveIcon ?? item.icon,
+                    Expanded(
+                      child: IconTheme(
+                        data: IconThemeData(
+                            size: item.iconSize,
+                            color: isSelected
+                                ? (item.activeColorSecondary ??
+                                    item.activeColorPrimary)
+                                : item.inactiveColorPrimary ??
+                                    item.activeColorPrimary),
+                        child: isSelected
+                            ? item.icon
+                            : item.inactiveIcon ?? item.icon,
+                      ),
                     ),
                     Container(
                       height: 5,
